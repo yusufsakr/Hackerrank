@@ -73,23 +73,3 @@ int sortedSum(int arr_count, int *a)
 
 	return answer;
 }
-
-int main()
-{
-	int arr_count;
-	scanf("%d", &arr_count);
-
-	int *a = (int *)malloc(arr_count * sizeof(int));
-
-	for (int i = 0; i < arr_count; i++)
-	{
-		scanf("%d", &a[i]);
-	}
-
-	int result = sortedSum(arr_count, a);
-	printf("%d\n", result);
-
-	free(a);
-
-	return 0;
-}

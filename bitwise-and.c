@@ -50,28 +50,3 @@ long countPairs(int arr_count, int *arr)
 	free(freqDict); // Free the dynamically allocated memory for the frequency dictionary
 	return counterOfPairs;
 }
-
-int main()
-{
-	int arr_count;
-
-	// Get the number of elements in the array from the user
-	scanf("%d", &arr_count);
-
-	// Dynamically allocate memory for the array
-	int *arr = (int *)malloc(arr_count * sizeof(int));
-
-	// Get the elements of the array from the user
-	for (int i = 0; i < arr_count; i++)
-	{
-		scanf("%d", &arr[i]);
-	}
-
-	long result = countPairs(arr_count, arr);
-
-	printf("%ld\n", result);
-
-	free(arr); // Free the dynamically allocated memory for the array
-
-	return 0;
-}
